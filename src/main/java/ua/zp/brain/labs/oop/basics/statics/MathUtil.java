@@ -30,6 +30,9 @@ public class MathUtil {
      */
     public static int mul(int ...values) {
         int result = 0;
+        for(int a: values) {
+            result *= a;
+        }
         // TODO  complete this.
         return result;
     }
@@ -43,7 +46,10 @@ public class MathUtil {
     public static void printWithSkip(int skipValue, int ...values) {
         //TODO modify this method to complete the output of characters but skip the specified value.
         for(int a: values) {
-            System.out.print(a+" ");
+            if (a == skipValue) {
+                continue;
+            }
+            else System.out.print(a+" ");
         }
     }
 
@@ -56,7 +62,10 @@ public class MathUtil {
     public static void printToValue(int interruptValue, int ...values) {
         //TODO modify this method to complete the output of characters upon reaching the specified interrupt parameter
         for(int a: values) {
-            System.out.print(a+" ");
+            if (a == interruptValue) {
+                return;
+            }
+            else System.out.print(a+" ");
         }
     }
 
@@ -68,6 +77,9 @@ public class MathUtil {
      */
     public static int factorial(int a) {
         int result = 1;
+        for (int i = 1; i <= a; i++) {
+            result *= i;
+        }
         // TODO complete this. Calc FACTORIAL for 'a'
         return result;
     }
@@ -75,13 +87,16 @@ public class MathUtil {
     /**
      * Calc harmonic progression for value with ratio.
      *
-     * @param a base value
-     * @param q ratio
-     * @param count calc count
+     * @param a base value - начальное значение
+     * @param q ratio - на сколько умножать
+     * @param count calc count - сколько раз
      * @return harmonic progression result.
      */
     public static int harmonicProgression(int a, int q, int count) {
         int result = a;
+        for (int i = a; i < ; i*=q) {
+            
+        }
         // TODO complete this. Calc Harmonic Progression.
         return result;
     }
